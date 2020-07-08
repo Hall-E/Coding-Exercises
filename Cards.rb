@@ -1,6 +1,6 @@
 
 deck = []
-
+hand = []
 x = 0
 
 class Card
@@ -14,7 +14,7 @@ class Card
   def printsuite
     @suite
   end
-
+begin
   def self.all
     ObjectSpace.each_object(self).to_a
   end
@@ -22,6 +22,7 @@ class Card
   def self.count
     all.count
   end
+end
 end
 
 ##card = Card.new(10, "spades")
@@ -38,10 +39,21 @@ loop do
     break
   end
 end
-
 }
 
-deck.each do |card|
+=begin
+deck.shuffle.each do |card|
 print card.printnumber
+print " "
 puts card.printsuite
 end
+=end
+
+hand << deck.shuffle.first(5)
+
+
+puts "hand"
+puts hand
+
+puts hand.first
+puts deck.count
