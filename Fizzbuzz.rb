@@ -1,7 +1,6 @@
 x=0
 fizz=3
 buzz=5
-
 loop do
   x += 1
 
