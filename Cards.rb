@@ -33,8 +33,6 @@ end
 loop do
   x += 1
   deck << card = Card.new(x,suite)
-    print card.printnumber
-  puts card.printsuite
   if x == 10
     x = 0
     break
@@ -43,4 +41,7 @@ end
 
 }
 
-puts deck
+deck.each do |card|
+print card.printnumber
+puts card.printsuite
+end
