@@ -49,11 +49,14 @@ puts card.printsuite
 end
 =end
 
-hand << deck.shuffle.first(5)
+puts deck.shuffle.first(5)
+deck.shuffle.first(5).each do |card|
+hand << card
+end
 
 
 puts "hand"
 puts hand
 
-puts hand.first
+puts hand.count
 puts deck.count
